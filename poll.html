@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lease VS Buy</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="styles/style.css" />
+	</head>
+	<body class="body-gray">
+		<header class="header">
+			<div class="container">
+				<a href="/">
+					<img src="images/svg/logo_1.svg" alt="logo" />
+				</a>
+
+				<nav class="nav">
+					<ul class="nav-list">
+						<li class="nav-list__item active"><a href="/">Авто</a></li>
+						<li class="nav-list__item"><a href="#">Строительная техника</a></li>
+						<li class="nav-list__item"><a href="#">Мед. оборудование</a></li>
+						<li class="nav-list__item"><a href="#">IT-оборудование</a></li>
+					</ul>
+				</nav>
+
+				<a href="/" class="btn--light"> Почати опитування </a>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="poll">
+				<div class="container">
+					<h1 class="poll__title">Заголовок общий №1</h1>
+					<div class="poll__list">
+						<div class="poll_menu">
+							<div class="indicator"></div>
+							<div class="menu-item active" data-index="0">Вступ</div>
+							<div class="menu-item" data-index="1">Опитування</div>
+							<div class="menu-item" data-index="2">Калькулятор</div>
+							<div class="menu-item" data-index="3">Результати</div>
+						</div>
+						<div class="poll_right">
+							<div class="poll_main poll_column">
+								<div class="poll_main__content">
+									<h2>Заголовок 2</h2>
+									<p>
+										Lease vs Buy — це програма для самостійної перевірки
+										симптомів, створена лікарями для тих, хто хоче дізнатися
+										більше про свої симптоми, знайти їх можливі причини,
+										отримати рекомендації щодо подальших дій або просто краще
+										підготуватися до візиту до лікаря.
+									</p>
+									<ul>
+										<li>
+											Lease vs Buy — це програма для самостійної перевірки
+										</li>
+										<li>
+											Lease vs Buy — це програма для самостійної перевірки
+										</li>
+									</ul>
+
+									<h3>Заголовок 3</h3>
+									<ol>
+										<li>Сплануйте фінансові витрати</li>
+										<li>Сплануйте фінансові витрати</li>
+									</ol>
+
+									<div class="poll_footer">
+										<button class="btn-back">
+											<span class="btn-back__icon"
+												><img src="images/svg/arrow-back.svg" alt="back"
+											/></span>
+											Назад
+										</button>
+									</div>
+								</div>
+
+								<img src="images/svg/poll1.svg" />
+							</div>
+
+							<div class="poll_main poll_column">
+								<div class="poll_main__content">
+									<h2>Умови використання</h2>
+									<p>
+										Перед початком діагностики, будь ласка, прочитайте Умови
+										використання і пам'ятайте, що:
+									</p>
+									<ul>
+										<li>
+											<b>Дане обстеження не є повноцінною діагностикою.</b> Воно
+											призначене виключно для ознайомлення та не є
+											кваліфікованим медичним висновком.
+										</li>
+										<li>
+											<b>Дане обстеження не призначене для екстрених</b
+											>випадків. У разі невідкладного стану негайно
+											зателефонуйте за місцевим номером екстреної допомоги.
+										</li>
+										<li>
+											<b>Ваші дані в безпеці.</b> Надана Вами інформація не буде
+											передана або використана з метою встановлення Вашої особи.
+										</li>
+									</ul>
+
+									<div class="checkbox-container">
+										<input type="checkbox" id="terms" />
+										<label for="terms"
+											>Я прочитав(ла) і приймаю
+											<a href="#">Умови використання</a>.</label
+										>
+									</div>
+
+									<div class="checkbox-container">
+										<input type="checkbox" id="privacy" />
+										<label for="privacy">
+											Я погоджуюсь на те, щоб інформація про стан мого здоров’я
+											була використана для даного обстеження. Додаткова
+											інформація <a href="#">Політика конфіденційності</a>.
+										</label>
+									</div>
+
+									<div class="poll_footer">
+										<button class="btn-back">
+											<span class="btn-back__icon"
+												><img src="images/svg/arrow-back.svg" alt="back"
+											/></span>
+											Назад
+										</button>
+									</div>
+								</div>
+
+								<img src="images/svg/poll-2.svg" />
+							</div>
+
+							<div class="poll_main">
+								<div class="poll_main__content">
+									<h1 class="poll_question">
+										Як довго ви плануєте володіти автомобілем?
+									</h1>
+									<div class="poll_answers">
+										<div class="poll_answer">
+											<input type="radio" id="option1" name="duration" />
+											<label for="option1"
+												>До 3 років. Я віддаю перевагу змінювати
+												автомобіль.</label
+											>
+										</div>
+										<div class="poll_answer">
+											<input type="radio" id="option2" name="duration" />
+											<label for="option2"
+												>Більше 5 років. Мені важливо, щоб автомобіль був
+												довговічним.</label
+											>
+										</div>
+										<div class="poll_answer">
+											<input type="radio" id="option3" name="duration" />
+											<label for="option3">Не знаю</label>
+										</div>
+									</div>
+									<div class="poll_info">
+										<img src="images/svg/info.svg" alt="info" />
+										<p>
+											Дане обстеження не призначене для екстрених випадків. У
+											разі невідкладного стану негайно
+											<a href="#">зателефонуйте</a> за місцевим номером
+											екстреної допомоги.
+										</p>
+									</div>
+									<div class="poll_footer">
+										<button class="btn-back">
+											<span class="btn-back__icon"
+												><img src="images/svg/arrow-back.svg" alt="back"
+											/></span>
+											Назад
+										</button>
+										<a href="#" class="poll_report-link"
+											>Повідомити про проблему з цим запитанням</a
+										>
+										<span class="poll_progress">1/5</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="poll_main">
+								<div class="poll_main__content">
+									<h1 class="calculator_title">Калькулятор</h1>
+
+									<!-- Інформаційне повідомлення -->
+									<div class="calculator_info__message">
+										We are asking this question to better understand the needs
+										and motivations of patients using this checkup. Your answer
+										will help us learn and improve our product.
+									</div>
+
+									<!-- Вхідні дані -->
+									<div class="calculator_input__fields">
+										<div class="calculator_input__group">
+											<label for="cap-cost" class="calculator_input__label"
+												>Cap cost (capitalized cost):</label
+											>
+											<div class="input-container">
+												<span class="currency-symbol">$</span>
+												<input
+													type="text"
+													class="currency-input"
+													placeholder="Enter amount"
+												/>
+											</div>
+										</div>
+										<div class="calculator_input__group">
+											<label for="down-payment" class="calculator_input__label"
+												>Down payment:</label
+											>
+											<div class="input-container">
+												<span class="currency-symbol">$</span>
+												<input
+													type="text"
+													class="currency-input"
+													placeholder="Enter amount"
+												/>
+											</div>
+										</div>
+										<div class="calculator_input__group">
+											<label
+												for="residual-value"
+												class="calculator_input__label"
+												>Residual value:</label
+											>
+											<div class="input-container">
+												<span class="currency-symbol">$</span>
+												<input
+													type="text"
+													class="currency-input"
+													placeholder="Enter amount"
+												/>
+											</div>
+										</div>
+										<div class="calculator_input__group">
+											<label for="loose-money" class="calculator_input__label"
+												>Loose money factor:</label
+											>
+											<div class="input-container">
+												<span class="currency-symbol">%</span>
+												<input
+													type="text"
+													class="currency-input"
+													placeholder="Enter amount"
+												/>
+											</div>
+										</div>
+										<div class="calculator_input__group">
+											<label for="interest-rate" class="calculator_input__label"
+												>Interest rate:</label
+											>
+											<div class="input-container">
+												<span class="currency-symbol">%</span>
+												<input
+													type="text"
+													class="currency-input"
+													placeholder="Enter amount"
+												/>
+											</div>
+										</div>
+										<div class="calculator_input__group">
+											<label for="fees" class="calculator_input__label"
+												>Непонятно fees:</label
+											>
+											<div class="input-container">
+												<span class="currency-symbol">%</span>
+												<input
+													type="text"
+													class="currency-input"
+													placeholder="Enter amount"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<!-- Повзунок для вибору терміну -->
+									<div class="calculator_slider__container">
+										<label for="terms-slider" class="calculator_slider__label"
+											>Terms (months):</label
+										>
+										<input
+											type="range"
+											id="terms-slider"
+											class="calculator_slider__input"
+											min="0"
+											max="72"
+											step="12"
+											value="24"
+										/>
+										<div class="calculator_slider__values">
+											<span>0</span><span>12</span><span>24</span
+											><span>36</span> <span>48</span><span>60</span
+											><span>72</span>
+										</div>
+									</div>
+
+									<!-- Результати -->
+									<div class="calculator_results">
+										<h2 class="calculator_results__title">
+											Total Cost of Ownership
+										</h2>
+										<table class="calculator_table">
+											<thead>
+												<tr>
+													<th class="calculator__table-title">Lease</th>
+													<th>
+														<div class="double_lease">
+															<h3>Lease 24</h3>
+															<div class="double_lease__wrapper">
+																<h4>$3000  down payment</h4>
+																<span>Дане обстеження</span>
+															</div>
+															<div class="double_lease__wrapper">
+																<h4>+ $14,178 some text</h4>
+																<span
+																	>Дане обстеження не призначене для екстрених
+																	випадків.</span
+																>
+															</div>
+															<div class="double_lease__wrapper">
+																<h4>- $11,378 some text</h4>
+																<span>Дане обстеження не призначене</span>
+															</div>
+														</div>
+													</th>
+													<th>$21,740</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<strong class="calculator__table-title">Buy</strong>
+													</td>
+													<td>
+														<div class="double_lease">
+															<h3>Lease 36</h3>
+															<div class="double_lease__wrapper">
+																<h4>$3000  down payment</h4>
+																<span>Дане обстеження</span>
+															</div>
+															<div class="double_lease__wrapper">
+																<h4>+ $14,178 some text</h4>
+																<span
+																	>Дане обстеження не призначене для екстрених
+																	випадків.</span
+																>
+															</div>
+															<div class="double_lease__wrapper">
+																<h4>- $11,378 some text</h4>
+																<span>Дане обстеження не призначене</span>
+															</div>
+														</div>
+													</td>
+													<td class="calculator_total">$19,370</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div class="poll_footer">
+										<button class="btn-back">
+											<span class="btn-back__icon"
+												><img src="images/svg/arrow-back.svg" alt="back"
+											/></span>
+											Назад
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="poll_main">
+								<div class="poll_main__content">
+									<h2>Результат</h2>
+
+									<div class="poll_main__cell">
+										<div class="poll_main__cell__content">
+											<h3>
+												Судячи з результатів обох методів підрахунку, вам більше
+												підходить <b>лізинг.</b>
+											</h3>
+											<ul class="poll_main__list">
+												<li>
+													<a href="#"
+														><img src="images/svg/link.svg" alt="link"
+													/></a>
+												</li>
+												<li>
+													<a href="#"
+														><img src="images/svg/x.svg" alt="" x
+													/></a>
+												</li>
+												<li>
+													<a href="#"
+														><img src="images/svg/linkedin.svg" alt="linkedin"
+													/></a>
+												</li>
+												<li>
+													<a href="#"
+														><img src="images/svg/facebook.svg" alt="facebook"
+													/></a>
+												</li>
+											</ul>
+										</div>
+										<div>
+											<img src="images/illustration.svg" alt="illustration" />
+										</div>
+									</div>
+
+									<h3>Метод взвешенного суммирования критериев</h3>
+									<div class="result__diagram"></div>
+
+									<table class="result__table">
+										<thead class="result__header">
+											<tr class="result__row">
+												<th class="result__header-cell"></th>
+												<th
+													class="result__header-cell result__header-cell--lease"
+												>
+													Lease <span class="result__score">11</span>
+												</th>
+												<th
+													class="result__header-cell result__header-cell--buy"
+												>
+													Buy <span class="result__score">7</span>
+												</th>
+											</tr>
+										</thead>
+										<tbody class="result__body">
+											<tr class="result__row">
+												<td class="result__cell result__left">
+													Размер платежа
+												</td>
+												<td class="result__cell result__cell--lease">2</td>
+												<td class="result__cell result__cell--buy">2</td>
+											</tr>
+											<tr class="result__row">
+												<td class="result__cell result__left">Срок владения</td>
+												<td class="result__cell result__cell--lease">3</td>
+												<td class="result__cell result__cell--buy">1</td>
+											</tr>
+											<tr class="result__row">
+												<td class="result__cell result__left">
+													Стоимость владения (калькуляция)
+												</td>
+												<td class="result__cell result__cell--lease">1</td>
+												<td class="result__cell result__cell--buy">3</td>
+											</tr>
+											<tr class="result__row">
+												<td class="result__cell result__left">
+													Финансовая гибкость
+												</td>
+												<td class="result__cell result__cell--lease">2</td>
+												<td class="result__cell result__cell--buy">5</td>
+											</tr>
+											<tr class="result__row">
+												<td class="result__cell result__left">Пробег</td>
+												<td class="result__cell result__cell--lease">3</td>
+												<td class="result__cell result__cell--buy">3</td>
+											</tr>
+											<tr class="result__row">
+												<td class="result__cell result__left">Уход</td>
+												<td class="result__cell result__cell--lease">6</td>
+												<td class="result__cell result__cell--buy">2</td>
+											</tr>
+											<tr class="result__row">
+												<td class="result__cell result__left">Модификация</td>
+												<td class="result__cell result__cell--lease">1</td>
+												<td class="result__cell result__cell--buy">1</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<h3>AHP (аналит. иерарх. модель)</h3>
+									<div class="hierarchy__wrapper">
+										<img src="images/diagram.png" alt="diagram" />
+										<span class="hierarchy_lease">12345673</span>
+										<span class="hierarchy_buy">12345673</span>
+									</div>
+								</div>
+
+								<div class="poll_footer">
+									<button class="btn-back">
+										<span class="btn-back__icon"
+											><img src="images/svg/arrow-back.svg" alt="back"
+										/></span>
+										Назад
+									</button>
+								</div>
+							</div>
+
+							<p class="poll_desc">
+								Lease vs Buy — це програма для самостійної перевірки симптомів,
+								створена лікарями для тих, хто хоче дізнатися більше про свої
+								симптоми, знайти їх можливі причини, отримати рекомендації щодо
+								подальших дій або просто краще підготуватися до візиту до
+								лікаря. Lease vs Buy — це програма для самостійної перевірки
+								симптомів, створена лікарями для тих, хто хоче дізнатися більше
+								про свої симптоми, знайти їх можливі причини, отримати
+								рекомендації щодо подальших дій або просто краще підготуватися
+								до візиту до лікаря. Lease vs Buy — це програма для самостійної
+								перевірки симптомів, створена лікарями для тих, хто хоче
+								дізнатися більше про свої симптоми, знайти їх можливі причини,
+								отримати рекомендації щодо подальших дій або просто краще
+								підготуватися до візиту до лікаря.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container footer__container">
+				<div class="footer__cell">
+					<a href="/">
+						<img src="images/svg/logo_1.svg" alt="logo" />
+					</a>
+
+					<p>© Lease-vs-Buy.com</p>
+				</div>
+
+				<div class="footer__cell">
+					<nav class="footer_nav">
+						<ul class="footer_nav__list">
+							<li class="footer_nav__item active"><a href="#">Авто</a></li>
+							<li class="footer_nav__item">
+								<a href="#">Строительная техника</a>
+							</li>
+							<li class="footer_nav__item">
+								<a href="#">Мед. оборудование</a>
+							</li>
+							<li class="footer_nav__item"><a href="#">IT-оборудование</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="footer__cell">
+					<p>
+						Для отримання додаткової інформації перегляньте наші
+						<a href="#" class="footer__cell-link">Умови використання</a>,
+						<a href="#" class="footer__cell-link">Політику конфіденційності</a>,
+						<a href="#" class="footer__cell-link">
+							Політику щодо файлів Coockie</a
+						>.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/index.js"></script>
+		<script src="js/poll.js"></script>
+	</body>
+</html>
