@@ -3,53 +3,73 @@ const leftButton = document.querySelector('.carousel__button--left');
 const rightButton = document.querySelector('.carousel__button--right');
 
 const items = document.querySelectorAll('.posts_list__item');
-const itemWidth = items[0].getBoundingClientRect().width + 18; // Ширина элемента + gap
-const visibleItems = Math.floor(carousel.parentElement.offsetWidth / itemWidth); // Видимые элементы
+let itemWidth = 0;
+let visibleItems = 0;
 const totalItems = items.length - 1;
 
 let offset = 0;
 
-// Функция для обновления кнопок
-function updateButtons() {
-	leftButton.disabled = offset === 0;
-	rightButton.disabled = offset <= -(itemWidth * (totalItems - visibleItems));
+// Рассчитать количество видимых элементов на основе ширины экрана
+function calculateVisibleItems() {
+	const containerWidth = carousel.parentElement.offsetWidth;
+
+	if (containerWidth <= 375) {
+		visibleItems = 1; // По 1 элементу
+	} else if (containerWidth <= 580) {
+		visibleItems = 2; // По 2 элемента
+	} else if (containerWidth <= 845) {
+		visibleItems = 3; // По 3 элемента
+	} else {
+		visibleItems = 4; // По умолчанию - 4 элемента
+	}
+
+	itemWidth = containerWidth / visibleItems; // Ширина каждого элемента
+	return visibleItems;
 }
 
-// Функция перемещения карусели
+// Обновить стили элементов
+function updateStyles() {
+	items.forEach(item => {
+		item.style.flex = `0 0 ${itemWidth - 18}px`; // Учитываем gap
+		item.style.maxWidth = `${itemWidth - 18}px`;
+	});
+	updateButtons();
+}
+
+// Обновить состояние кнопок
+function updateButtons() {
+	const maxOffset = -(itemWidth * (totalItems - visibleItems));
+	leftButton.disabled = offset === 0;
+	rightButton.disabled = offset <= maxOffset;
+}
+
+// Переместить карусель
 function moveCarousel(direction) {
 	if (direction === 'left') {
 		offset += itemWidth;
 		if (offset > 0) offset = 0;
 	} else if (direction === 'right') {
-		offset -= itemWidth;
 		const maxOffset = -(itemWidth * (totalItems - visibleItems));
+		offset -= itemWidth;
 		if (offset < maxOffset) offset = maxOffset;
 	}
-
 	carousel.style.transform = `translateX(${offset}px)`;
 	updateButtons();
 }
 
-// Клики по кнопкам
+// Пересчитать при изменении размера окна
+function handleResize() {
+	visibleItems = calculateVisibleItems();
+	offset = 0; // Сброс позиции
+	updateStyles();
+	carousel.style.transform = 'translateX(0px)';
+}
+
+// Добавить слушатели событий
 leftButton.addEventListener('click', () => moveCarousel('left'));
 rightButton.addEventListener('click', () => moveCarousel('right'));
+window.addEventListener('resize', handleResize);
 
-// Свайп для мобильных
-let startX = 0;
-let endX = 0;
-
-carousel.addEventListener('touchstart', event => {
-	startX = event.touches[0].clientX;
-});
-
-carousel.addEventListener('touchend', event => {
-	endX = event.changedTouches[0].clientX;
-	if (startX > endX + 50) {
-		moveCarousel('right');
-	} else if (startX < endX - 50) {
-		moveCarousel('left');
-	}
-});
-
-// Первоначальное обновление кнопок
+// Инициализация
+handleResize();
 updateButtons();

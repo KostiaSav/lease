@@ -35,8 +35,8 @@
 		position: fixed;
 		top: 0;
 		right: -100%;
-		height: 100%;
-		width: 100%;
+		height: 100vh;
+		width: 100vw;
 		max-width: 100vw;
 		background-color: #007dfc;
 		display: flex;
@@ -68,15 +68,16 @@
 	}
 
 	#navMenu.active {
-		right: 4%;
+		right: 0;
+		left: 0;
 	}
 
 	.btn-nav {
 		display: none;
 	}
 
-	.hero .container {
-		flex-direction: column;
+	.hero-title {
+		font-size: 32px;
 	}
 
 	.hero .container img {
@@ -87,8 +88,115 @@
 		margin-bottom: 35px;
 	}
 
+	.about__cell {
+		flex-direction: column;
+	}
+
+	.about_cell__content p {
+		padding: 0;
+	}
+
+	.about__cell {
+		gap: 0;
+	}
+
+	.about_cell__link {
+		margin: 0;
+	}
+
+	.about_cell__content span {
+		padding-left: 0;
+	}
+
+	.about {
+		padding: 60px 0px;
+	}
+
+	.posts__block {
+		padding: 60px 0px;
+	}
+
 	.footer__cell:last-child p {
 		width: auto;
 		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 672px) {
+	.hero .container {
+		flex-direction: column;
+	}
+
+	.hero .container img {
+		max-width: 100%;
+	}
+
+	.hero-btn {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.hero {
+		margin: 40px 0px;
+	}
+
+	.hero__list {
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	.posts_list__item {
+		max-width: calc(100% - 20px);
+	}
+
+	.posts__title h2 {
+		font-size: 24px;
+	}
+
+	.posts__title span {
+		font-size: 14px;
+	}
+
+	.carousel__button {
+		width: 30px;
+		height: 30px;
+		font-size: 16px;
+	}
+
+	.carousel__button--left {
+		left: 10px;
+	}
+
+	.carousel__button--right {
+		right: 10px;
+	}
+}
+
+@media (max-width: 845px) {
+	.posts_list__item {
+		flex: 0 0 calc(100% / 3 - 18px); /* По умолчанию - 3 элемента */
+		max-width: 270px;
+	}
+	.posts__block {
+		padding: 90px 0px;
+	}
+}
+@media (max-width: 580px) {
+	.posts_list__item {
+		flex: 0 0 calc(100% / 2 - 18px); /* По 2 элемента */
+	}
+	.posts__title {
+		padding-bottom: 60px;
+	}
+	.posts__block {
+		padding: 60px 0px;
+	}
+}
+
+@media (max-width: 375px) {
+	.posts_list__item {
+		flex: 0 0 calc(100% - 18px); /* По 1 элементу */
 	}
 }
