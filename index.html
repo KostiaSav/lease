@@ -13,6 +13,7 @@
 		/>
 		<link rel="stylesheet" href="styles/normalize.css" />
 		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/mobile.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -21,7 +22,18 @@
 					<img src="images/svg/logo_1.svg" alt="logo" />
 				</a>
 
-				<nav class="nav">
+				<nav class="nav" id="navMenu">
+					<div class="nav-menu__header">
+						<a href="/">
+							<img src="images/svg/logo_1.svg" alt="logo" />
+						</a>
+						<div class="burger-menu" onclick="toggleMenu()">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</div>
+
 					<ul class="nav-list">
 						<li class="nav-list__item active"><a href="/">Авто</a></li>
 						<li class="nav-list__item"><a href="#">Строительная техника</a></li>
@@ -30,7 +42,13 @@
 					</ul>
 				</nav>
 
-				<a href="/" class="btn--light"> Почати опитування </a>
+				<div class="burger-menu" onclick="toggleMenu()">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+
+				<a href="/" class="btn--light btn-nav"> Почати опитування </a>
 			</div>
 		</header>
 
@@ -91,29 +109,45 @@
 						<span>Всі статті</span>
 					</div>
 
-					<ul class="posts__list">
-						<li class="posts_list__item">
-							<img src="images/post-4.jpeg" alt="post" />
-							<p>Це програма для самостійної перевірки симптомів</p>
-						</li>
-
-						<li class="posts_list__item">
-							<img src="images/post-3.jpeg" alt="post" />
-							<p>
-								Це програма для самостійної перевірки симптомів для самостійної
-							</p>
-						</li>
-
-						<li class="posts_list__item">
-							<img src="images/post-2.jpeg" alt="post" />
-							<p>Це програма для самостійної</p>
-						</li>
-
-						<li class="posts_list__item">
-							<img src="images/post-1.jpeg" alt="post" />
-							<p>Це програма для самостійної перевірки симптомів</p>
-						</li>
-					</ul>
+					<button class="carousel__button carousel__button--left">←</button>
+					<div class="carousel__wrapper">
+						<div class="carousel">
+							<ul class="posts__list">
+								<li class="posts_list__item">
+									<img src="images/post-4.jpeg" alt="post" />
+									<p>Це програма для самостійної перевірки симптомів</p>
+								</li>
+								<li class="posts_list__item">
+									<img src="images/post-3.jpeg" alt="post" />
+									<p>
+										Це програма для самостійної перевірки симптомів для
+										самостійної
+									</p>
+								</li>
+								<li class="posts_list__item">
+									<img src="images/post-2.jpeg" alt="post" />
+									<p>Це програма для самостійної</p>
+								</li>
+								<li class="posts_list__item">
+									<img src="images/post-1.jpeg" alt="post" />
+									<p>Це програма для самостійної перевірки симптомів</p>
+								</li>
+								<li class="posts_list__item">
+									<img src="images/post-1.jpeg" alt="post" />
+									<p>Це програма для самостійної перевірки симптомів</p>
+								</li>
+								<li class="posts_list__item">
+									<img src="images/post-1.jpeg" alt="post" />
+									<p>Це програма для самостійної перевірки симптомів</p>
+								</li>
+								<li class="posts_list__item">
+									<img src="images/post-1.jpeg" alt="post" />
+									<p>Це програма для самостійної перевірки симптомів</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<button class="carousel__button carousel__button--right">→</button>
 				</div>
 			</section>
 		</main>
@@ -156,6 +190,60 @@
 			</div>
 		</footer>
 
+		<div class="modal" id="modal1">
+			<div class="modal-overlay"></div>
+			<div class="modal-wrapper">
+				<div class="modal-header">
+					<span class="close-btn">&times;</span>
+					<h2 class="h2">Умови використання</h2>
+				</div>
+				<div class="modal-content">
+					<h3 class="h3">Результат</h3>
+				</div>
+				<div class="modal-content">
+					<h3 class="h3">Результат</h3>
+					<p class="p">
+						Перед початком діагностики, будь ласка, прочитайте Умови
+						використання і пам'ятайте, що:
+					</p>
+					<ul class="ul-list">
+						<li>
+							<b>Дане обстеження не є повноцінною діагностикою.</b> Воно
+							призначене виключно для ознайомлення та не є кваліфікованим
+							медичним висновком.
+						</li>
+						<li>
+							<b>Дане обстеження не призначене для екстрених випадків.</b> У
+							разі невідкладного стану негайно зателефонуйте за місцевим номером
+							екстреної допомоги.
+						</li>
+						<li>
+							<b>Ваші дані в безпеці.</b> Надана Вами інформація не буде
+							передана або використана з метою встановлення Вашої особи.
+						</li>
+					</ul>
+					<div class="checkbox-container">
+						<input type="checkbox" id="terms" />
+						<label for="terms"
+							>Я прочитав(ла) і приймаю
+							<a href="#">Умови використання</a>.</label
+						>
+					</div>
+					<div class="checkbox-container">
+						<input type="checkbox" id="privacy" />
+						<label for="privacy">
+							Я погоджуюсь на те, щоб інформація про стан мого здоров’я була
+							використана для даного обстеження. Додаткова інформація
+							<a href="#">Політика конфіденційності</a>.
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script src="js/index.js"></script>
+		<script src="js/carousel.js"></script>
+		<script src="js/modal.js"></script>
+		<script src="js/burger.js"></script>
 	</body>
 </html>

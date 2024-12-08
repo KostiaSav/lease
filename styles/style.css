@@ -42,6 +42,11 @@ a {
 	background: #007dfc;
 	padding: 12px 30px 12px 30px;
 	box-shadow: 0px 8px 20px 0px rgba(55, 128, 203, 0.37);
+	transition: 0.3s;
+}
+
+.btn--blue:hover {
+	background: #0171e0;
 }
 
 /* HEADER */
@@ -167,6 +172,10 @@ a {
 	padding: 160px 0px;
 }
 
+.posts__block .container {
+	position: relative;
+}
+
 .posts__title {
 	display: flex;
 	justify-content: space-between;
@@ -177,11 +186,13 @@ a {
 .posts__list {
 	display: flex;
 	list-style: none;
-	gap: 30px;
+	gap: 18px;
+	transition: transform 0.5s ease-in-out;
 }
 
 .posts_list__item {
 	max-width: 270px;
+	flex: 0 0 auto;
 }
 
 .posts__title h2 {
@@ -213,6 +224,47 @@ a {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 160%;
+}
+
+.carousel__wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel {
+	overflow: hidden;
+}
+
+.carousel__button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	box-shadow: 0px 8px 20px 0px rgba(55, 128, 203, 0.37);
+	background: rgb(0, 125, 252);
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+.carousel__button--left {
+	left: -40px;
+}
+
+.carousel__button--right {
+	right: -40px;
+}
+
+.carousel__button[disabled] {
+	opacity: 0.5;
+	cursor: not-allowed;
 }
 
 /* FOOTER LIST */
@@ -337,16 +389,19 @@ a {
 	justify-content: space-between;
 	align-items: flex-start;
 	gap: 50px;
+	flex-wrap: wrap;
 }
 
-.poll_main h2 {
+.poll_main h2,
+h2 {
 	color: rgb(25, 27, 30);
 	font-size: 30px;
 	font-weight: 600;
 	margin-bottom: 24px;
 }
 
-.poll_main h3 {
+.poll_main h3,
+.h3 {
 	color: rgb(25, 27, 30);
 	font-size: 24px;
 	font-weight: 600;
@@ -354,7 +409,8 @@ a {
 	margin-bottom: 20px;
 }
 
-.poll_main p {
+.poll_main p,
+.p {
 	color: rgb(25, 27, 30);
 	font-size: 16px;
 	font-weight: 400;
@@ -362,13 +418,15 @@ a {
 	margin-bottom: 20px;
 }
 
-.poll_main ul {
+.poll_main ul,
+.ul-list {
 	margin-bottom: 40px;
 	list-style: none;
 	padding: 0;
 }
 
-.poll_main ul li {
+.poll_main ul li,
+.ul-list li {
 	position: relative;
 	padding-left: 22px;
 	margin-bottom: 10px;
@@ -378,7 +436,8 @@ a {
 	font-weight: 400;
 	line-height: 140%;
 }
-.poll_main ul li::before {
+.poll_main ul li::before,
+.ul-list li::before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -545,12 +604,15 @@ a {
 	border-top: 1px solid #dae1e9;
 	font-size: 14px;
 	color: #666;
+	width: 100%;
 }
 
 .btn-back {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 110px;
+	height: 48px;
 	gap: 8px;
 	border: 2px solid rgb(147, 168, 189);
 	background: #fff;
@@ -565,21 +627,28 @@ a {
 	box-shadow: 0px 8px 20px 0px rgba(55, 128, 203, 0.37);
 }
 
-.btn-back__icon {
-	display: inline-block;
-	font-size: 16px;
-	color: #b0c4db;
-	transition: color 0.3s ease;
-}
-
 .btn-back:hover {
 	background: #f5f7fa;
 	border-color: #7c9abb;
 	color: #191b1e;
 }
 
+.btn-back__icon img {
+	height: 19px;
+}
+
 .btn-back:hover .btn-back__icon {
 	color: #7c9abb;
+}
+
+.btn-next {
+	border: 0;
+	width: 110px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 }
 
 .poll_report-link {
@@ -623,7 +692,7 @@ a {
 .calculator_input__fields {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* Дві колонки */
-	gap: 20px; /* Проміжок між елементами */
+	gap: 20px;
 	margin-bottom: 20px;
 }
 
@@ -913,6 +982,10 @@ a {
 	line-height: 140%;
 }
 
+.poll_main__content__column {
+	max-width: 500px;
+}
+
 /* RESULT TABLE */
 
 .result {
@@ -1012,4 +1085,61 @@ a {
 	position: absolute;
 	right: 38.6%;
 	bottom: 13px;
+}
+
+/* Modal */
+
+.modal {
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 20%;
+	height: 100%;
+	max-width: 660px;
+	background-color: white;
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+	transition: right 0.3s ease-in-out;
+	z-index: 100;
+}
+
+.modal.active {
+	right: 0;
+}
+
+.modal-content {
+	padding: 20px;
+}
+
+.modal-header {
+	background-color: #f4f6f9;
+	padding: 30px 30px 10px 30px;
+}
+
+.modal-header h2 {
+	margin-top: 28px;
+}
+
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: 0.8s linear;
+	pointer-events: none;
+}
+
+.modal-overlay.active {
+	opacity: 1;
+	pointer-events: all;
 }

@@ -48,7 +48,7 @@
 						</div>
 						<div class="poll_right">
 							<div class="poll_main poll_column">
-								<div class="poll_main__content">
+								<div class="poll_main__content poll_main__content__column">
 									<h2>Заголовок 2</h2>
 									<p>
 										Lease vs Buy — це програма для самостійної перевірки
@@ -71,22 +71,24 @@
 										<li>Сплануйте фінансові витрати</li>
 										<li>Сплануйте фінансові витрати</li>
 									</ol>
-
-									<div class="poll_footer">
-										<button class="btn-back">
-											<span class="btn-back__icon"
-												><img src="images/svg/arrow-back.svg" alt="back"
-											/></span>
-											Назад
-										</button>
-									</div>
 								</div>
 
 								<img src="images/svg/poll1.svg" />
+
+								<div class="poll_footer">
+									<button class="btn-back">
+										<span class="btn-back__icon"
+											><img src="images/svg/arrow-back.svg" alt="back"
+										/></span>
+										Назад
+									</button>
+
+									<a class="btn--blue btn-next">Далі</a>
+								</div>
 							</div>
 
 							<div class="poll_main poll_column">
-								<div class="poll_main__content">
+								<div class="poll_main__content poll_main__content__column">
 									<h2>Умови використання</h2>
 									<p>
 										Перед початком діагностики, будь ласка, прочитайте Умови
@@ -125,18 +127,20 @@
 											інформація <a href="#">Політика конфіденційності</a>.
 										</label>
 									</div>
-
-									<div class="poll_footer">
-										<button class="btn-back">
-											<span class="btn-back__icon"
-												><img src="images/svg/arrow-back.svg" alt="back"
-											/></span>
-											Назад
-										</button>
-									</div>
 								</div>
 
 								<img src="images/svg/poll-2.svg" />
+
+								<div class="poll_footer">
+									<button class="btn-back">
+										<span class="btn-back__icon"
+											><img src="images/svg/arrow-back.svg" alt="back"
+										/></span>
+										Назад
+									</button>
+
+									<a class="btn--blue btn-next">Далі</a>
+								</div>
 							</div>
 
 							<div class="poll_main">
@@ -165,7 +169,12 @@
 										</div>
 									</div>
 									<div class="poll_info">
-										<img src="images/svg/info.svg" alt="info" />
+										<img
+											src="images/svg/info.svg"
+											alt="info"
+											data-target="modal1"
+											class="trigger-btn"
+										/>
 										<p>
 											Дане обстеження не призначене для екстрених випадків. У
 											разі невідкладного стану негайно
@@ -557,7 +566,57 @@
 			</div>
 		</footer>
 
+		<div class="modal" id="modal1">
+			<div class="modal-overlay"></div>
+			<div class="modal-wrapper">
+				<div class="modal-header">
+					<span class="close-btn">&times;</span>
+					<h2 class="h2">Умови використання</h2>
+				</div>
+				<div class="modal-content">
+					<h3 class="h3">Результат</h3>
+					<p class="p">
+						Перед початком діагностики, будь ласка, прочитайте Умови
+						використання і пам'ятайте, що:
+					</p>
+					<ul class="ul-list">
+						<li>
+							<b>Дане обстеження не є повноцінною діагностикою.</b> Воно
+							призначене виключно для ознайомлення та не є кваліфікованим
+							медичним висновком.
+						</li>
+						<li>
+							<b>Дане обстеження не призначене для екстрених випадків.</b> У
+							разі невідкладного стану негайно зателефонуйте за місцевим номером
+							екстреної допомоги.
+						</li>
+						<li>
+							<b>Ваші дані в безпеці.</b> Надана Вами інформація не буде
+							передана або використана з метою встановлення Вашої особи.
+						</li>
+					</ul>
+					<div class="checkbox-container">
+						<input type="checkbox" id="terms" />
+						<label for="terms"
+							>Я прочитав(ла) і приймаю
+							<a href="#">Умови використання</a>.</label
+						>
+					</div>
+
+					<div class="checkbox-container">
+						<input type="checkbox" id="privacy" />
+						<label for="privacy">
+							Я погоджуюсь на те, щоб інформація про стан мого здоров’я була
+							використана для даного обстеження. Додаткова інформація
+							<a href="#">Політика конфіденційності</a>.
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script src="js/index.js"></script>
 		<script src="js/poll.js"></script>
+		<script src="js/modal.js"></script>
 	</body>
 </html>

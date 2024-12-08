@@ -1,0 +1,94 @@
+.burger-menu {
+	width: 30px;
+	height: 25px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.burger-menu .bar {
+	height: 2px;
+	width: 100%;
+	background-color: #ffffff;
+	transition: 0.3s;
+}
+
+.nav-menu__header {
+	display: none;
+}
+
+/* Відображення бургер меню на екранах менше 991px */
+@media screen and (max-width: 991px) {
+	.burger-menu {
+		display: flex;
+	}
+
+	.nav-menu__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	#navMenu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		height: 100%;
+		width: 100%;
+		max-width: 100vw;
+		background-color: #007dfc;
+		display: flex;
+		flex-direction: column;
+		transition: 0.3s;
+		z-index: 1000;
+		padding: 16px;
+	}
+
+	.nav-list {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		margin-top: 45px;
+		gap: 30px;
+	}
+
+	.nav-menu ul {
+		list-style-type: none;
+		text-align: center;
+	}
+
+	#navMenu ul li a {
+		color: white;
+		text-decoration: none;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 130%;
+	}
+
+	#navMenu.active {
+		right: 4%;
+	}
+
+	.btn-nav {
+		display: none;
+	}
+
+	.hero .container {
+		flex-direction: column;
+	}
+
+	.hero .container img {
+		max-width: 339px;
+	}
+
+	.hero__content {
+		margin-bottom: 35px;
+	}
+
+	.footer__cell:last-child p {
+		width: auto;
+		max-width: 100%;
+	}
+}
