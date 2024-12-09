@@ -13,6 +13,7 @@
 		/>
 		<link rel="stylesheet" href="styles/normalize.css" />
 		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/mobile.css" />
 	</head>
 	<body class="body-gray">
 		<header class="header">
@@ -21,7 +22,18 @@
 					<img src="images/svg/logo_1.svg" alt="logo" />
 				</a>
 
-				<nav class="nav">
+				<nav class="nav" id="navMenu">
+					<div class="nav-menu__header">
+						<a href="/">
+							<img src="images/svg/logo_1.svg" alt="logo" />
+						</a>
+						<div class="burger-menu" onclick="toggleMenu()">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</div>
+
 					<ul class="nav-list">
 						<li class="nav-list__item active"><a href="/">Авто</a></li>
 						<li class="nav-list__item"><a href="#">Строительная техника</a></li>
@@ -30,7 +42,13 @@
 					</ul>
 				</nav>
 
-				<a href="/" class="btn--light"> Почати опитування </a>
+				<div class="burger-menu" onclick="toggleMenu()">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+
+				<a href="/poll.html" class="btn--light btn-nav"> Почати опитування </a>
 			</div>
 		</header>
 
@@ -491,7 +509,12 @@
 
 									<h3>AHP (аналит. иерарх. модель)</h3>
 									<div class="hierarchy__wrapper">
-										<img src="images/diagram.png" alt="diagram" />
+										<img src="images/diagram.png" class="d-pc" alt="diagram" />
+										<img
+											src="images/\svg/-2.svg"
+											class="d-mobile"
+											alt="diagram"
+										/>
 										<span class="hierarchy_lease">12345673</span>
 										<span class="hierarchy_buy">12345673</span>
 									</div>
@@ -618,5 +641,6 @@
 		<script src="js/index.js"></script>
 		<script src="js/poll.js"></script>
 		<script src="js/modal.js"></script>
+		<script src="js/burger.js"></script>
 	</body>
 </html>

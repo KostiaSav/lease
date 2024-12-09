@@ -116,9 +116,95 @@
 		padding: 60px 0px;
 	}
 
+	.calculator_input__fields {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.calculator_input__group {
+		max-width: 100%;
+		width: 100%;
+		gap: 10px;
+		flex-direction: column;
+		align-items: start;
+	}
+
+	.input-container {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.poll_column {
+		gap: 20px;
+	}
+
+	.poll_main {
+		padding: 30px;
+		margin-bottom: 40px;
+	}
+
+	.poll_main__content__column {
+		max-width: calc(100% - 210px);
+	}
+
+	.poll_main img {
+		max-width: 189px;
+	}
+
+	.poll__list {
+		gap: 30px;
+		margin-top: 30px;
+	}
+
+	.poll_right {
+		width: calc(100% - 128px - 35px);
+	}
+
 	.footer__cell:last-child p {
 		width: auto;
 		max-width: 100%;
+	}
+
+	.footer__cell:not(:first-child) {
+		padding-left: 48px;
+	}
+
+	.footer__container {
+		flex-direction: column;
+	}
+
+	.footer__cell:first-child {
+		gap: 20px;
+	}
+
+	.footer__cell:not(:first-child) {
+		padding-left: 0;
+		padding-top: 30px;
+		border-left: 0;
+		border-top: 1px solid #5696d8;
+		margin-top: 30px;
+	}
+
+	.hierarchy__wrapper img {
+		max-width: 100%;
+		width: 100% !important;
+	}
+
+	.hierarchy_lease {
+		bottom: 11px;
+		font-size: 11px;
+	}
+
+	.hierarchy_buy {
+		bottom: 11px;
+		font-size: 11px;
+	}
+
+	.modal {
+		width: 50%;
+	}
+
+	.modal-overlay {
+		width: 50%;
 	}
 }
 
@@ -143,6 +229,48 @@
 
 	.hero__list {
 		margin-bottom: 40px;
+	}
+
+	.poll_main__cell {
+		flex-direction: column;
+		gap: 0px;
+	}
+
+	.poll_main__content__column {
+		max-width: 100%;
+	}
+
+	.poll_right img {
+		max-width: 100%;
+		order: -1;
+		margin: 0 auto;
+	}
+
+	.hierarchy_lease {
+		font-size: 18px;
+		bottom: 43%;
+		left: 76.3%;
+	}
+	.hierarchy_buy {
+		font-size: 16px;
+		bottom: 52.8%;
+		right: 9.3%;
+	}
+
+	.modal {
+		width: 80%;
+	}
+
+	.modal-overlay {
+		width: 20%;
+	}
+
+	.d-pc {
+		display: none;
+	}
+
+	.d-mobile {
+		display: block;
 	}
 }
 
@@ -172,6 +300,65 @@
 	.carousel__button--right {
 		right: 10px;
 	}
+
+	.poll__list {
+		flex-direction: column;
+	}
+
+	.poll_menu {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		max-width: 100%;
+	}
+
+	.menu-item {
+		text-align: left;
+		flex: 1;
+		padding: 10px 5px;
+		font-size: 14px;
+	}
+
+	.indicator {
+		left: 0;
+		bottom: 0 !important;
+		width: 100px; /* Ширина индикатора */
+		height: 4px !important; /* Высота индикатора */
+		top: auto; /* Убираем позиционирование сверху */
+		transition: left 0.3s ease; /* Индикатор перемещается по горизонтали */
+	}
+
+	.poll_right {
+		width: 100%;
+	}
+
+	.poll_footer {
+		gap: 30px;
+	}
+
+	.calculator_table thead tr,
+	.calculator_table tbody tr {
+		display: flex;
+		flex-direction: column; /* Делаем строки вертикальными */
+		align-items: flex-start; /* Выравниваем по левому краю */
+		padding: 10px;
+		width: 100%;
+	}
+
+	.calculator_table th,
+	.calculator_table td {
+		width: 100%;
+	}
+
+	.calculator_table th:first-child,
+	.calculator_table td:first-child {
+		border-radius: 20px 20px 0px 0px;
+	}
+
+	.calculator_table th:last-child,
+	.calculator_table td:last-child {
+		border-radius: 0px 0px 20px 20px;
+	}
 }
 
 @media (max-width: 845px) {
@@ -198,5 +385,13 @@
 @media (max-width: 375px) {
 	.posts_list__item {
 		flex: 0 0 calc(100% - 18px); /* По 1 элементу */
+	}
+
+	.modal {
+		width: 100%;
+	}
+
+	.modal-overlay {
+		width: 0%;
 	}
 }
