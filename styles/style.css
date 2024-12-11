@@ -129,19 +129,27 @@ a {
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 160%;
+	border-left: 1px solid #dae1e9;
 }
 .posts__block {
 	padding: 160px 0;
 }
 .posts__block .container {
 	position: relative;
-	overflow: hidden;
 }
 .posts__title {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-bottom: 70px;
+}
+
+.posts__title a {
+	text-decoration: none;
+}
+
+.carousel__wrapper {
+	overflow: hidden;
 }
 .posts__list {
 	display: flex;
@@ -160,6 +168,7 @@ a {
 .posts__title h2 {
 	color: #191b1e;
 	font-size: 36px;
+	margin-bottom: 0;
 }
 .posts__title span {
 	position: relative;
@@ -212,10 +221,10 @@ a {
 	z-index: 10;
 }
 .carousel__button--left {
-	left: 10px;
+	left: -40px;
 }
 .carousel__button--right {
-	right: 10px;
+	right: -20px;
 }
 .carousel__button[disabled] {
 	opacity: 0.5;
@@ -273,6 +282,10 @@ a {
 .poll {
 	max-width: 100%;
 	padding: 80px 0;
+}
+
+.poll h1 {
+	margin-top: 0;
 }
 .poll_menu {
 	max-width: 128px;
@@ -354,7 +367,7 @@ h2 {
 }
 .poll_main ul,
 .ul-list {
-	margin-bottom: 40px;
+	margin-bottom: 28px;
 	list-style: none;
 	padding: 0;
 }
@@ -373,8 +386,7 @@ h2 {
 	content: '';
 	position: absolute;
 	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 8px;
 	width: 8px;
 	height: 8px;
 	background-image: url(../images/svg/mark-1.svg);
@@ -419,7 +431,8 @@ h2 {
 .checkbox-container {
 	display: flex;
 	align-items: flex-start;
-	margin-bottom: 15px;
+	margin-bottom: 8px;
+	margin-top: 12px;
 }
 .checkbox-container input[type='checkbox'] {
 	display: none;
@@ -457,6 +470,14 @@ h2 {
 	font-size: 14px;
 	font-weight: 700;
 }
+
+.checkbox-error {
+	color: #e13a3a;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 120%;
+}
+
 .poll_question {
 	font-size: 20px;
 	font-weight: 700;
@@ -502,14 +523,26 @@ h2 {
 	align-items: flex-start;
 }
 .poll_info p {
-	max-width: 478px;
+	max-width: 501px;
+	color: rgb(79, 85, 95);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 120%;
 }
 .poll_info a {
-	color: #007bff;
+	color: rgb(0, 125, 252);
+	font-weight: 700;
 }
 .poll_info a:hover {
 	text-decoration: underline;
 }
+
+.poll-label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
 .poll_footer {
 	display: flex;
 	justify-content: space-between;
@@ -569,7 +602,14 @@ h2 {
 }
 .poll_progress {
 	font-weight: 700;
+	color: rgb(147, 168, 189);
+	font-size: 16px;
 }
+
+.poll_progress b {
+	color: rgb(25, 27, 30);
+}
+
 .calculator_main__container {
 	max-width: 800px;
 	margin: 0 auto;
@@ -584,12 +624,89 @@ h2 {
 	margin-bottom: 20px;
 }
 .calculator_info__message {
-	background-color: #eef7ff;
+	display: flex;
+	gap: 5px;
+	background: rgb(244, 246, 249);
 	padding: 15px;
-	border-radius: 8px;
+	border-radius: 10px;
 	margin-bottom: 20px;
 	font-size: 14px;
+	color: rgb(79, 85, 95);
+	font-weight: 400;
+	line-height: 130%;
+	border: 1px solid rgb(0, 125, 252);
 }
+
+/* Стили для ползунка */
+.calculator_slider__input {
+	-webkit-appearance: none; /* Убираем стандартный стиль */
+	width: 100%;
+	height: 6px; /* Высота трека */
+	background: #007dfc;
+	border-radius: 5px;
+	outline: none;
+	transition: background 0.3s ease; /* Плавное обновление */
+}
+
+/* Стиль для кругляша (ползунка) */
+.calculator_slider__input::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Убираем стандартный стиль */
+	width: 20px;
+	height: 20px;
+	background: #93a8bd;
+	border: 2px solid #fff;
+	border-radius: 50%; /* Делаем его круглым */
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+}
+
+/* Для Firefox */
+.calculator_slider__input::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	background: #93a8bd;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+/* Для Internet Explorer */
+.calculator_slider__input::-ms-thumb {
+	width: 20px;
+	height: 20px;
+	background: #93a8bd;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+/* Стилизация трека для Firefox */
+.calculator_slider__input::-moz-range-track {
+	background: #007dfc;
+	height: 6px;
+	border-radius: 5px;
+}
+
+/* Для Internet Explorer */
+.calculator_slider__input::-ms-track {
+	width: 100%;
+	height: 6px;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+.calculator_slider__input::-ms-fill-lower {
+	background: #007dfc;
+	border-radius: 5px;
+}
+
+.calculator_slider__input::-ms-fill-upper {
+	background: gray;
+	border-radius: 5px;
+}
+
 .calculator_input__fields {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -684,6 +801,7 @@ h2 {
 	background-color: #0056b3;
 }
 .input-container {
+	position: relative;
 	display: flex;
 	align-items: center;
 	border: 1px solid #ccc;
@@ -705,6 +823,16 @@ h2 {
 	justify-content: center;
 	height: 100%;
 }
+
+.procent-symbol {
+	order: 2;
+	border-radius: 0px 10px 10px 0px;
+}
+
+.input-container__procent {
+	padding: 0 0px 0 10px;
+}
+
 .currency-input {
 	width: 80%;
 	border: none;
@@ -715,6 +843,30 @@ h2 {
 	border-radius: 0 10px 10px 0;
 	background-color: transparent;
 }
+
+.input-container.disabled {
+	background-color: #f4f6f9;
+}
+
+.input-container-link {
+	position: absolute;
+	top: 23%;
+	left: 36px;
+	color: rgb(0, 125, 252);
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 140%;
+	text-decoration: underline;
+}
+
+.input-container.disabled .currency-input {
+	color: #007dfc;
+	text-decoration: underline;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 140%;
+}
+
 .calculator_results__table {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -775,7 +927,7 @@ h2 {
 	font-weight: 700;
 	text-align: right;
 }
-.double_lease h3 {
+.double_lease span.double_lease-title {
 	color: rgb(25, 27, 30);
 	font-size: 20px;
 	font-weight: 600;
@@ -784,7 +936,7 @@ h2 {
 	padding: 0;
 	margin-bottom: 16px;
 }
-.double_lease h4 {
+.double_lease span.double_lease-subtitle {
 	color: rgb(25, 27, 30);
 	font-size: 16px;
 	font-weight: 500;
@@ -874,7 +1026,7 @@ h2 {
 	color: green;
 }
 .result__header-cell--buy {
-	color: orange;
+	color: rgb(209, 103, 45);
 }
 .result__score {
 	font-size: 18px;
@@ -901,7 +1053,7 @@ h2 {
 	font-weight: 700;
 }
 .result__cell--buy {
-	color: #d1672d;
+	color: rgb(209, 103, 45);
 	font-weight: 700;
 }
 .result__diagram {
@@ -937,7 +1089,6 @@ h2 {
 	right: -100%;
 	width: 30%;
 	height: 100%;
-	max-width: 660px;
 	background-color: #fff;
 	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
 	transition: right 0.3s ease-in-out;

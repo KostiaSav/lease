@@ -92,9 +92,7 @@
 						</div>
 					</div>
 					<div class="about__cell">
-						<div class="about_cell__title">
-							<h2></h2>
-						</div>
+						<div class="about_cell__title" style="width: 311px"></div>
 
 						<div class="about_cell__content about_cell__link">
 							<span>Дізнайтеся більше <a href="/">про нас</a></span>
@@ -107,10 +105,17 @@
 				<div class="container">
 					<div class="posts__title">
 						<h2>Статті</h2>
-						<span>Всі статті</span>
+						<span><a href="">Всі статті</a></span>
 					</div>
 
-					<button class="carousel__button carousel__button--left">←</button>
+					<button class="carousel__button carousel__button--left">
+						<img
+							src="images/svg/arrow_left.svg"
+							alt="arrow"
+							width="15px"
+							height="15px"
+						/>
+					</button>
 					<div class="carousel__wrapper">
 						<div class="carousel">
 							<ul class="posts__list">
@@ -148,7 +153,14 @@
 							</ul>
 						</div>
 					</div>
-					<button class="carousel__button carousel__button--right">→</button>
+					<button class="carousel__button carousel__button--right">
+						<img
+							src="images/svg/arrow_right.svg"
+							alt="arrow"
+							width="15px"
+							height="15px"
+						/>
+					</button>
 				</div>
 			</section>
 		</main>
@@ -230,6 +242,9 @@
 							<a href="#">Умови використання</a>.</label
 						>
 					</div>
+					<span class="checkbox-error"
+						>Необхідно прийняти умови використання</span
+					>
 					<div class="checkbox-container">
 						<input type="checkbox" id="privacy" />
 						<label for="privacy">
@@ -238,6 +253,9 @@
 							<a href="#">Політика конфіденційності</a>.
 						</label>
 					</div>
+					<span class="checkbox-error"
+						>Необхідно прийняти умови використання</span
+					>
 				</div>
 			</div>
 		</div>

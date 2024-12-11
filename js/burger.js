@@ -1,1 +1,16 @@
-function toggleMenu(){const navMenu=document.getElementById('navMenu');navMenu.classList.toggle('active');const bars=document.querySelectorAll('.burger-menu .bar');if(navMenu.classList.contains('active')){bars[0].style.transform='rotate(45deg)';bars[1].style.opacity='0';bars[2].style.transform='rotate(-45deg)'}else{bars[0].style.transform='rotate(0)';bars[1].style.opacity='1';bars[2].style.transform='rotate(0)'}}
+function toggleMenu() {
+	const navMenu = document.getElementById('navMenu');
+	const burgerMenus = document.querySelectorAll('.burger-menu');
+
+	console.log('Menu active before:', navMenu.classList.contains('active'));
+
+	if (navMenu.classList.contains('active')) {
+		navMenu.classList.remove('active');
+		burgerMenus.forEach(menu => menu.classList.remove('active'));
+	} else {
+		navMenu.classList.add('active');
+		burgerMenus.forEach(menu => menu.classList.add('active'));
+	}
+
+	console.log('Menu active after:', navMenu.classList.contains('active'));
+}

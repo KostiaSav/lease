@@ -137,6 +137,10 @@
 										>
 									</div>
 
+									<span class="checkbox-error"
+										>Необхідно прийняти умови використання</span
+									>
+
 									<div class="checkbox-container">
 										<input type="checkbox" id="privacy" />
 										<label for="privacy">
@@ -145,6 +149,10 @@
 											інформація <a href="#">Політика конфіденційності</a>.
 										</label>
 									</div>
+
+									<span class="checkbox-error"
+										>Необхідно прийняти умови використання</span
+									>
 								</div>
 
 								<img src="images/svg/poll-2.svg" />
@@ -183,7 +191,12 @@
 										</div>
 										<div class="poll_answer">
 											<input type="radio" id="option3" name="duration" />
-											<label for="option3">Не знаю</label>
+											<label for="option3" class="poll-label"
+												>Не знаю
+												<img
+													src="images/svg/arrow_right_answer.svg"
+													alt="arrow"
+											/></label>
 										</div>
 									</div>
 									<div class="poll_info">
@@ -210,7 +223,7 @@
 										<a href="#" class="poll_report-link"
 											>Повідомити про проблему з цим запитанням</a
 										>
-										<span class="poll_progress">1/5</span>
+										<span class="poll_progress"><b>1/</b>5</span>
 									</div>
 								</div>
 							</div>
@@ -221,9 +234,22 @@
 
 									<!-- Інформаційне повідомлення -->
 									<div class="calculator_info__message">
-										We are asking this question to better understand the needs
-										and motivations of patients using this checkup. Your answer
-										will help us learn and improve our product.
+										<div>
+											<img
+												src="images/svg/info_2.svg"
+												alt="info"
+												data-target="modal1"
+												class="trigger-btn"
+											/>
+										</div>
+										<span>
+											We are asking this question to better understand the needs
+											and motivations of patients using this checkup. Your
+											answer will help us learn and improve our product.
+										</span>
+										<div>
+											<img src="images/svg/close.svg" alt="close" />
+										</div>
 									</div>
 
 									<!-- Вхідні дані -->
@@ -243,6 +269,21 @@
 										</div>
 										<div class="calculator_input__group">
 											<label for="down-payment" class="calculator_input__label"
+												>Loose money factor:</label
+											>
+											<div class="input-container input-container__procent">
+												<span class="currency-symbol procent-symbol">%</span>
+												<input
+													type="text"
+													class="currency-input"
+													placeholder="Enter amount"
+												/>
+											</div>
+										</div>
+										<div class="calculator_input__group">
+											<label
+												for="residual-value"
+												class="calculator_input__label"
 												>Down payment:</label
 											>
 											<div class="input-container">
@@ -255,26 +296,11 @@
 											</div>
 										</div>
 										<div class="calculator_input__group">
-											<label
-												for="residual-value"
-												class="calculator_input__label"
-												>Residual value:</label
-											>
-											<div class="input-container">
-												<span class="currency-symbol">$</span>
-												<input
-													type="text"
-													class="currency-input"
-													placeholder="Enter amount"
-												/>
-											</div>
-										</div>
-										<div class="calculator_input__group">
 											<label for="loose-money" class="calculator_input__label"
-												>Loose money factor:</label
+												>Interest rate:</label
 											>
-											<div class="input-container">
-												<span class="currency-symbol">%</span>
+											<div class="input-container input-container__procent">
+												<span class="currency-symbol procent-symbol">%</span>
 												<input
 													type="text"
 													class="currency-input"
@@ -284,15 +310,12 @@
 										</div>
 										<div class="calculator_input__group">
 											<label for="interest-rate" class="calculator_input__label"
-												>Interest rate:</label
+												>Residual value:</label
 											>
-											<div class="input-container">
-												<span class="currency-symbol">%</span>
-												<input
-													type="text"
-													class="currency-input"
-													placeholder="Enter amount"
-												/>
+											<div class="input-container disabled">
+												<span class="currency-symbol">$</span>
+												<input type="text" class="currency-input" disabled />
+												<a href="#" class="input-container-link">21,089</a>
 											</div>
 										</div>
 										<div class="calculator_input__group">
@@ -300,7 +323,7 @@
 												>Непонятно fees:</label
 											>
 											<div class="input-container">
-												<span class="currency-symbol">%</span>
+												<span class="currency-symbol">$</span>
 												<input
 													type="text"
 													class="currency-input"
@@ -342,20 +365,29 @@
 													<th class="calculator__table-title">Lease</th>
 													<th>
 														<div class="double_lease">
-															<h3>Lease 24</h3>
+															<span class="double_lease-title">Lease 24</span>
 															<div class="double_lease__wrapper">
-																<h4>$3000  down payment</h4>
+																<span class="double_lease-subtitle"
+																	>$3000  down payment</span
+																>
+																<br />
 																<span>Дане обстеження</span>
 															</div>
 															<div class="double_lease__wrapper">
-																<h4>+ $14,178 some text</h4>
+																<span class="double_lease-subtitle"
+																	>+ $14,178 some text</span
+																>
+																<br />
 																<span
 																	>Дане обстеження не призначене для екстрених
 																	випадків.</span
 																>
 															</div>
 															<div class="double_lease__wrapper">
-																<h4>- $11,378 some text</h4>
+																<span class="double_lease-subtitle"
+																	>- $11,378 some text</span
+																>
+																<br />
 																<span>Дане обстеження не призначене</span>
 															</div>
 														</div>
@@ -372,18 +404,27 @@
 														<div class="double_lease">
 															<h3>Lease 36</h3>
 															<div class="double_lease__wrapper">
-																<h4>$3000  down payment</h4>
+																<span class="double_lease-subtitle"
+																	>$3000  down payment</span
+																>
+																<br />
 																<span>Дане обстеження</span>
 															</div>
 															<div class="double_lease__wrapper">
-																<h4>+ $14,178 some text</h4>
+																<span class="double_lease-subtitle"
+																	>+ $14,178 some text</span
+																>
+																<br />
 																<span
 																	>Дане обстеження не призначене для екстрених
 																	випадків.</span
 																>
 															</div>
 															<div class="double_lease__wrapper">
-																<h4>- $11,378 some text</h4>
+																<span class="double_lease-subtitle"
+																	>- $11,378 some text</span
+																>
+																<br />
 																<span>Дане обстеження не призначене</span>
 															</div>
 														</div>
@@ -443,7 +484,15 @@
 										</div>
 									</div>
 
-									<h3>Метод взвешенного суммирования критериев</h3>
+									<h3>
+										Метод взвешенного суммирования критериев
+										<img
+											src="images/svg/info.svg"
+											alt="info"
+											data-target="modal1"
+											class="trigger-btn"
+										/>
+									</h3>
 									<div class="result__diagram"></div>
 
 									<table class="result__table">
@@ -507,11 +556,19 @@
 										</tbody>
 									</table>
 
-									<h3>AHP (аналит. иерарх. модель)</h3>
-									<div class="hierarchy__wrapper">
-										<img src="images/diagram.png" class="d-pc" alt="diagram" />
+									<h3>
+										AHP (аналит. иерарх. модель)
 										<img
-											src="images/\svg/-2.svg"
+											src="images/svg/info.svg"
+											alt="info"
+											data-target="modal1"
+											class="trigger-btn"
+										/>
+									</h3>
+									<div class="hierarchy__wrapper">
+										<img src="images/diagram.svg" class="d-pc" alt="diagram" />
+										<img
+											src="images/diagram-2.svg"
 											class="d-mobile"
 											alt="diagram"
 										/>
@@ -642,5 +699,6 @@
 		<script src="js/poll.js"></script>
 		<script src="js/modal.js"></script>
 		<script src="js/burger.js"></script>
+		<script src="js/slider.js"></script>
 	</body>
 </html>
