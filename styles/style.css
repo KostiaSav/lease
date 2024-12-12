@@ -300,17 +300,17 @@ a {
 .menu-item {
 	padding: 10px 20px;
 	font-size: 16px;
-	color: #6b6b6b;
+	color: #93a8bd;
 	cursor: pointer;
 	position: relative;
 	text-align: left;
 	transition: color 0.3s ease;
 }
 .menu-item:hover {
-	color: #000;
+	color: #191b1e;
 }
 .menu-item.active {
-	color: #000;
+	color: #191b1e;
 	font-weight: 700;
 }
 .indicator {
@@ -319,6 +319,17 @@ a {
 	width: 4px;
 	height: 42px;
 	background-color: #007bff;
+	border-radius: 2px;
+	transition: top 0.3s ease;
+	z-index: 100;
+}
+
+.indicator_back {
+	position: absolute;
+	left: 0;
+	width: 4px;
+	height: 158px;
+	background-color: #dae1e9;
 	border-radius: 2px;
 	transition: top 0.3s ease;
 }
@@ -927,7 +938,20 @@ h2 {
 	font-weight: 700;
 	text-align: right;
 }
-.double_lease span.double_lease-title {
+
+.double_lease {
+	display: flex;
+	gap: 5px;
+}
+
+.double_lease-item {
+	border-radius: 10px;
+	background: rgb(244, 246, 249);
+	padding: 20px;
+}
+
+.one_lease span.one_lease-title,
+.double_lease-item span.one_lease-title {
 	color: rgb(25, 27, 30);
 	font-size: 20px;
 	font-weight: 600;
@@ -936,14 +960,17 @@ h2 {
 	padding: 0;
 	margin-bottom: 16px;
 }
-.double_lease span.double_lease-subtitle {
+.one_lease span.one_lease-subtitle,
+.double_lease-item span.one_lease-subtitle {
 	color: rgb(25, 27, 30);
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 140%;
 	margin: 0;
 	padding: 0;
+	font-weight: 500;
 }
+.one_lease span,
 .double_lease span {
 	color: rgb(79, 85, 95);
 	font-size: 14px;
@@ -951,9 +978,25 @@ h2 {
 	line-height: 120%;
 	margin-bottom: 16px;
 }
-.double_lease__wrapper {
-	margin-bottom: 16px;
+
+.double_lease-plus {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+.double_lease-plus span {
+	color: #007dfc;
+	font-size: 22px;
+	margin-bottom: 0;
+}
+
+.one_lease__wrapper {
+	margin-top: 16px;
+}
+
+/* DOUBLE LEASE */
+
 .calculator__table-title {
 	color: rgb(25, 27, 30);
 	font-size: 24px;

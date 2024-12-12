@@ -8,7 +8,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+			href="https://fonts.googleapis.com/css?family=Inter"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="styles/normalize.css" />
@@ -59,6 +59,7 @@
 					<div class="poll__list">
 						<div class="poll_menu">
 							<div class="indicator"></div>
+							<div class="indicator_back"></div>
 							<div class="menu-item active" data-index="0">Вступ</div>
 							<div class="menu-item" data-index="1">Опитування</div>
 							<div class="menu-item" data-index="2">Калькулятор</div>
@@ -91,7 +92,7 @@
 									</ol>
 								</div>
 
-								<img src="images/svg/poll1.svg" />
+								<img src="images/svg/poll1.svg" alt="poll" />
 
 								<div class="poll_footer">
 									<button class="btn-back">
@@ -155,7 +156,7 @@
 									>
 								</div>
 
-								<img src="images/svg/poll-2.svg" />
+								<img src="images/svg/poll-2.svg" alt="poll2" />
 
 								<div class="poll_footer">
 									<button class="btn-back">
@@ -364,17 +365,17 @@
 												<tr>
 													<th class="calculator__table-title">Lease</th>
 													<th>
-														<div class="double_lease">
-															<span class="double_lease-title">Lease 24</span>
-															<div class="double_lease__wrapper">
-																<span class="double_lease-subtitle"
+														<div class="one_lease">
+															<span class="one_lease-title">Lease 24</span>
+															<div class="one_lease__wrapper">
+																<span class="one_lease-subtitle"
 																	>$3000  down payment</span
 																>
 																<br />
 																<span>Дане обстеження</span>
 															</div>
-															<div class="double_lease__wrapper">
-																<span class="double_lease-subtitle"
+															<div class="one_lease__wrapper">
+																<span class="one_lease-subtitle"
 																	>+ $14,178 some text</span
 																>
 																<br />
@@ -383,8 +384,8 @@
 																	випадків.</span
 																>
 															</div>
-															<div class="double_lease__wrapper">
-																<span class="double_lease-subtitle"
+															<div class="one_lease__wrapper">
+																<span class="one_lease-subtitle"
 																	>- $11,378 some text</span
 																>
 																<br />
@@ -401,17 +402,17 @@
 														<strong class="calculator__table-title">Buy</strong>
 													</td>
 													<td>
-														<div class="double_lease">
-															<h3>Lease 36</h3>
-															<div class="double_lease__wrapper">
-																<span class="double_lease-subtitle"
+														<div class="one_lease">
+															<span class="one_lease-title">Lease 36</span>
+															<div class="one_lease__wrapper">
+																<span class="one_lease-subtitle"
 																	>$3000  down payment</span
 																>
 																<br />
 																<span>Дане обстеження</span>
 															</div>
-															<div class="double_lease__wrapper">
-																<span class="double_lease-subtitle"
+															<div class="one_lease__wrapper">
+																<span class="one_lease-subtitle"
 																	>+ $14,178 some text</span
 																>
 																<br />
@@ -420,8 +421,117 @@
 																	випадків.</span
 																>
 															</div>
-															<div class="double_lease__wrapper">
-																<span class="double_lease-subtitle"
+															<div class="one_lease__wrapper">
+																<span class="one_lease-subtitle"
+																	>- $11,378 some text</span
+																>
+																<br />
+																<span>Дане обстеження не призначене</span>
+															</div>
+														</div>
+													</td>
+													<td class="calculator_total">$19,370</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="calculator_table">
+											<thead>
+												<tr>
+													<th class="calculator__table-title">Lease</th>
+													<th>
+														<div class="double_lease">
+															<div class="double_lease-item">
+																<span class="one_lease-title">Lease 24</span>
+																<div class="one_lease__wrapper">
+																	<span class="one_lease-subtitle"
+																		>$3000  down payment</span
+																	>
+																	<br />
+																	<span>Дане обстеження</span>
+																</div>
+																<div class="one_lease__wrapper">
+																	<span class="one_lease-subtitle"
+																		>+ $14,178 some text</span
+																	>
+																	<br />
+																	<span
+																		>Дане обстеження не призначене для екстрених
+																		випадків.</span
+																	>
+																</div>
+																<div class="one_lease__wrapper">
+																	<span class="one_lease-subtitle"
+																		>- $11,378 some text</span
+																	>
+																	<br />
+																	<span>Дане обстеження не призначене</span>
+																</div>
+															</div>
+
+															<div class="double_lease-plus">
+																<span>+</span>
+															</div>
+
+															<div class="double_lease-item">
+																<span class="one_lease-title">Lease 24</span>
+																<div class="one_lease__wrapper">
+																	<span class="one_lease-subtitle"
+																		>$3000  down payment</span
+																	>
+																	<br />
+																	<span>Дане обстеження</span>
+																</div>
+																<div class="one_lease__wrapper">
+																	<span class="one_lease-subtitle"
+																		>+ $14,178 some text</span
+																	>
+																	<br />
+																	<span
+																		>Дане обстеження не призначене для екстрених
+																		випадків.</span
+																	>
+																</div>
+																<div class="one_lease__wrapper">
+																	<span class="one_lease-subtitle"
+																		>- $11,378 some text</span
+																	>
+																	<br />
+																	<span>Дане обстеження не призначене</span>
+																</div>
+															</div>
+														</div>
+													</th>
+													<th>$21,740</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<strong class="calculator__table-title">Buy</strong>
+													</td>
+													<td>
+														<div class="one_lease">
+															<span class="one_lease-title">Lease 36</span>
+															<div class="one_lease__wrapper">
+																<span class="one_lease-subtitle"
+																	>$3000  down payment</span
+																>
+																<br />
+																<span>Дане обстеження</span>
+															</div>
+															<div class="one_lease__wrapper">
+																<span class="one_lease-subtitle"
+																	>+ $14,178 some text</span
+																>
+																<br />
+																<span
+																	>Дане обстеження не призначене для екстрених
+																	випадків.</span
+																>
+															</div>
+															<div class="one_lease__wrapper">
+																<span class="one_lease-subtitle"
 																	>- $11,378 some text</span
 																>
 																<br />
@@ -463,9 +573,7 @@
 													/></a>
 												</li>
 												<li>
-													<a href="#"
-														><img src="images/svg/x.svg" alt="" x
-													/></a>
+													<a href="#"><img src="images/svg/x.svg" alt="x" /></a>
 												</li>
 												<li>
 													<a href="#"
