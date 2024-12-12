@@ -197,6 +197,7 @@ a {
 .carousel__wrapper {
 	position: relative;
 	overflow: hidden;
+	margin-left: 9px;
 }
 .carousel {
 	display: flex;

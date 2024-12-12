@@ -291,9 +291,10 @@
 		font-size: 14px;
 	}
 	.carousel__button {
-		width: 30px;
-		height: 30px;
+		width: 48px;
+		height: 48px;
 		font-size: 16px;
+		top: 45%;
 	}
 	.carousel__button--left {
 		left: 10px;
@@ -397,6 +398,10 @@
 	.hierarchy_buy,
 	.hierarchy_lease {
 		font-size: 12px;
+	}
+
+	.carousel__button {
+		top: 50%;
 	}
 }
 @media (max-width: 375px) {
