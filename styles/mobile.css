@@ -105,18 +105,11 @@
 	.about__cell {
 		flex-direction: column;
 	}
-	.about_cell__content p {
-		padding: 0;
-		border-left: 9px;
-	}
 	.about__cell {
 		gap: 0;
 	}
 	.about_cell__link {
-		margin: 0;
-	}
-	.about_cell__content span {
-		padding-left: 0;
+		margin-top: 30px;
 	}
 	.about {
 		padding: 60px 0;
@@ -278,6 +271,10 @@
 	}
 	.d-mobile {
 		display: block;
+	}
+
+	.about_cell__content p {
+		font-size: 18px;
 	}
 }
 @media (max-width: 768px) {
