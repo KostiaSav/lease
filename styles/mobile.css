@@ -216,6 +216,10 @@
 	#calculator_input__group-6 {
 		order: 6;
 	}
+
+	.carousel__button {
+		top: 47%;
+	}
 }
 @media screen and (max-width: 672px) {
 	.hero .container {
@@ -401,9 +405,16 @@
 	}
 
 	.carousel__button {
+		top: 49%;
+	}
+}
+
+@media (max-width: 416px) {
+	.carousel__button {
 		top: 50%;
 	}
 }
+
 @media (max-width: 375px) {
 	.posts_list__item {
 		flex: 0 0 calc(100% - 18px);
