@@ -204,6 +204,25 @@
 	.double_lease {
 		flex-direction: column;
 	}
+
+	#calculator_input__group-1 {
+		order: 1;
+	}
+	#calculator_input__group-2 {
+		order: 4;
+	}
+	#calculator_input__group-3 {
+		order: 2;
+	}
+	#calculator_input__group-4 {
+		order: 5;
+	}
+	#calculator_input__group-5 {
+		order: 3;
+	}
+	#calculator_input__group-6 {
+		order: 6;
+	}
 }
 @media screen and (max-width: 672px) {
 	.hero .container {
@@ -348,6 +367,10 @@
 	.calculator_table th:last-child,
 	.calculator_table td:last-child {
 		border-radius: 0 0 20px 20px;
+	}
+	.calculator_table thead tr,
+	.calculator_table tbody tr {
+		padding: 0 0 10px 0;
 	}
 }
 @media (max-width: 845px) {
